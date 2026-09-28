@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMovies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Mulish:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="logo">MyMovies</h1>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <main>
+      <section>
+        <div class="section-head">
+          <h2>Now Showing</h2>
+          <button class="see-more">See more</button>
+        </div>
+        <div id="nowPlaying" class="horizontal"></div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Popular</h2>
+          <button class="see-more">See more</button>
+        </div>
+        <div id="popular" class="vertical"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <img src="images/nav-film.svg" alt="Film" />
+      <img src="images/nav-bookmark.svg" alt="Gemte film" />
+      <img src="images/nav-bookmark-2.svg" alt="Gemte film" />
+    </nav>
+
+    <script src="js/detail.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

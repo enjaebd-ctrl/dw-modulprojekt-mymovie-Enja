@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMovies - Detaljer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Mulish:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="hero" id="hero">
+      <div class="hero-top">
+        <a href="index.html" class="back">
+          <img src="images/back.svg" alt="Tilbage" />
+        </a>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <a id="trailer" class="play" target="_blank">
+        <img src="images/play.svg" alt="Play" />
+        Play Trailer
+      </a>
+    </div>
+
+    <main class="sheet">
+      <div class="title-row">
+        <h1 id="titel"></h1>
+        <img src="images/bookmark.svg" alt="Gem film" class="bookmark" />
+      </div>
+      <p class="rating" id="rating"></p>
+      <div class="tags" id="genrer"></div>
+
+      <div class="facts">
+        <div><p class="label">Length</p><p id="laengde"></p></div>
+        <div><p class="label">Language</p><p id="sprog"></p></div>
+        <div><p class="label">Rating</p><p id="alder"></p></div>
+      </div>
+
+      <h2>Description</h2>
+      <p class="description" id="beskrivelse"></p>
+
+      <div class="section-head">
+        <h2>Cast</h2>
+        <button class="see-more">See more</button>
+      </div>
+      <div class="cast" id="cast"></div>
+    </main>
+
+    <script src="js/index.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
 </html>

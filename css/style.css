@@ -84,6 +84,15 @@ h3 {
   top: 3px;
   background-color: #fff;
   border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--navy);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(16px);
 }
 
 /* ---------- Overskrifter + See more ---------- */
@@ -201,6 +210,12 @@ h3 {
   height: 14px;
 }
 
+.tom-besked {
+  padding: 0 20px;
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
 /* ---------- Bundmenu ---------- */
 .bottom-nav {
   position: fixed;
@@ -218,8 +233,8 @@ h3 {
 }
 
 .bottom-nav img {
-  width: 21,12px;
-  height: 21,12px;
+  width: 21.12px;
+  height: 21.12px;
 }
 
 /* ---------- Detaljeside ---------- */
@@ -286,7 +301,15 @@ h3 {
 .bookmark {
   width: 24px;
   height: 24px;
+  box-sizing: content-box;
   flex-shrink: 0;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bookmark.gemt {
+  background-color: var(--tag-bg);
 }
 
 .facts {
@@ -346,4 +369,27 @@ h3 {
   font-size: 0.8rem;
   font-weight: 600;
   margin-top: 8px;
+}
+/* ---------- Darkmode ---------- */
+body.dark {
+  background-color: #12122a;
+  color: #fff;
+}
+
+body.dark .bottom-nav,
+body.dark .sheet {
+  background-color: #1b1b3a;
+}
+
+body.dark .tag {
+  background-color: #2a2a55;
+}
+
+body.dark .see-more {
+  border-color: #40406a;
+  color: #b5b5c8;
+}
+
+body.dark .bookmark.gemt {
+  background-color: #40406a;
 }

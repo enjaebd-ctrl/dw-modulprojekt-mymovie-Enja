@@ -10,3 +10,19 @@ const options = {
 const posterUrl = "https://image.tmdb.org/t/p/w342";
 const bigUrl = "https://image.tmdb.org/t/p/w780";
 const faceUrl = "https://image.tmdb.org/t/p/w185";
+
+// ---------- Darkmode ----------
+// Virker på både index.html og detail.html, da begge loader api.js
+const darkSwitch = document.querySelector(".switch input");
+
+// Sæt korrekt tilstand, når siden åbnes
+if (localStorage.getItem("darkmode") === "true") {
+  document.body.classList.add("dark");
+  darkSwitch.checked = true;
+}
+
+// Skift tilstand, når man trykker på knappen
+darkSwitch.addEventListener("change", () => {
+  document.body.classList.toggle("dark", darkSwitch.checked);
+  localStorage.setItem("darkmode", darkSwitch.checked);
+});

@@ -1,0 +1,349 @@
+:root {
+  --navy: #12125c;
+  --tag-bg: #dde3fb;
+  --tag-text: #7b8ce0;
+  --grey: #8a8a96;
+  --yellow: #f5b50a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  color: var(--navy);
+  background-color: #fff;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* ---------- Topbar ---------- */
+.topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 24px 20px 20px;
+}
+
+.logo {
+  font-size: 1.15rem;
+}
+
+.topbar .switch {
+  position: absolute;
+  right: 20px;
+}
+
+/* ---------- Switch (kun udseende) ---------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: #c9c9d1;
+  border-radius: 22px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* ---------- Overskrifter + See more ---------- */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 12px 0 16px;
+}
+
+.section-head h2 {
+  font-size: 1.2rem;
+}
+
+.see-more {
+  font-family: "Mulish", sans-serif;
+  font-size: 0.7rem;
+  color: var(--grey);
+  background: none;
+  border: 1px solid #c9c9d1;
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+/* ---------- Rating og tags ---------- */
+.rating {
+  font-size: 0.8rem;
+  color: var(--grey);
+  margin-top: 6px;
+}
+
+.rating .star {
+  width: 12px;
+  height: 11px;
+  margin: 0 4px 0 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* ---------- Now Showing (horisontalt scroll) ---------- */
+.horizontal {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 0 20px 24px;
+  scrollbar-width: none;
+}
+
+.horizontal::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 140px;
+}
+
+.card img {
+  width: 140px;
+  height: 206px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 12px;
+}
+
+/* ---------- Popular (lodret liste) ---------- */
+.vertical {
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.row img {
+  width: 85px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.clock {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Bundmenu ---------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  height: 64px;
+  background-color: #fff;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav img {
+  width: 21,12px;
+  height: 21,12px;
+}
+
+/* ---------- Detaljeside ---------- */
+.hero {
+  height: 265px;
+  background-color: #2a2a3a;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px;
+}
+
+.back img {
+  width: 24px;
+  height: 24px;
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.play img {
+  width: 45px;
+  height: 45px;
+}
+
+.sheet {
+  position: relative;
+  margin-top: -26px;
+  background-color: #fff;
+  border-radius: 26px 26px 0 0;
+  padding: 26px 24px 30px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.title-row h1 {
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.bookmark {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.facts {
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 0 26px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.label {
+  color: var(--grey);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.sheet h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: var(--grey);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+.sheet .section-head {
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.sheet .section-head h2 {
+  margin-bottom: 0;
+}
+
+.cast {
+  display: flex;
+  gap: 12px;
+}
+
+.person {
+  flex: 1;
+  min-width: 0;
+}
+
+.person img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.person p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 8px;
+}

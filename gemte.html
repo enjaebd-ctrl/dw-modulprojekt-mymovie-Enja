@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMovies - Gemte film</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Mulish:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="logo">Gemte film</h1>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <main>
+      <section>
+        <div id="gemteFilm" class="vertical"></div>
+        <p id="ingenGemte" class="tom-besked" style="display: none">
+          Du har ikke gemt nogen film endnu.
+        </p>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html"><img src="img/Bookmark.png" alt="Film" /></a>
+      <a href="gemte.html"><img src="img/Bookmark Copy.svg" alt="Gemte film" /></a>
+      <img src="img/Bookmark Copy 2.svg" alt="Gemte film" />
+    </nav>
+
+    <script src="js/api.js"></script>
+    <script src="js/gemte.js"></script>
+  </body>
+</html>

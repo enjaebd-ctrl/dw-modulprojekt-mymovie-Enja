@@ -12,10 +12,10 @@ const bigUrl = "https://image.tmdb.org/t/p/w780";
 const faceUrl = "https://image.tmdb.org/t/p/w185";
 
 // ---------- Darkmode ----------
-// Virker på både index.html og detail.html, da begge loader api.js
+// Virker på både index.html og detail.html, da begge loader api.js når man trykker på knappen
 const darkSwitch = document.querySelector(".switch input");
 
-// Sæt korrekt tilstand, når siden åbnes
+// Sæt korrekt tilstand til, når siden åbnes
 if (localStorage.getItem("darkmode") === "true") {
   document.body.classList.add("dark");
   darkSwitch.checked = true;

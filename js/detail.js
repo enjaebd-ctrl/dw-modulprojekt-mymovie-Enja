@@ -17,6 +17,7 @@ function opdaterBookmarkKnap() {
   }
 }
 
+
 bookmarkKnap.addEventListener("click", () => {
   let gemteFilm = hentGemteFilm();
   if (gemteFilm.includes(id)) {
